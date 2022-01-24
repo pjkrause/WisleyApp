@@ -4,9 +4,11 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Leaflet Preview</title>
+  <title>Wisley Tour</title>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+  <link rel="manifest" href="/manifest.json">
 
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css"
    integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
@@ -61,6 +63,22 @@
     map.on('locationerror', onLocationError);
 
   </script>
+
+
+/*
+  <script>
+    if (navigator.serviceWorker) {
+      navigator.serviceWorker.register('./serviceWorker.js')
+      .then( function(registration) {
+        console.log('Success!', registration.scope);
+      })
+      .catch( function(error) {
+        console.error('Failure!', error);
+      });
+      console.log('All done.');
+    }
+  </script>
+*/  
 
 </body>
 </html>

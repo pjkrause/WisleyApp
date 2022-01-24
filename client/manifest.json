@@ -1,0 +1,10 @@
+{
+    "lang": "en",
+     "name": "Wisley Garden Tour",
+     "short_name": "WisleyGT",
+     "description": "This is my website. There are many.",
+     "theme_color": "#336699",
+     "background_color": "#336699",
+     "start_url": "/index.html",
+     "display": "standalone"
+}
