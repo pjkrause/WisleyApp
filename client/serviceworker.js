@@ -1,5 +1,5 @@
 // This is the service worker with the combined offline experience (Offline page + Offline copy of pages)
-const version = 'V0.1';
+const version = 'V0.2';
 const CACHE = "pwabuilder-offline-page";
 
 importScripts('https://storage.googleapis.com/workbox-cdn/releases/5.1.2/workbox-sw.js');
@@ -14,6 +14,7 @@ self.addEventListener("message", (event) => {
 });
 
 self.addEventListener('install', async (event) => {
+  skipWaiting();    // added by pjk  
   event.waitUntil(
     caches.open(CACHE)
       .then((cache) => cache.add(offlineFallbackPage))
