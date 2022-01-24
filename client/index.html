@@ -61,21 +61,14 @@
 
   </script>
 
+  <script type="module">
+    import 'https://cdn.jsdelivr.net/npm/@pwabuilder/pwaupdate';
 
-/*
-  <script>
-    if (navigator.serviceWorker) {
-      navigator.serviceWorker.register('https://intense-woodland-96442.herokuapp.com/serviceWorker.js')
-      .then( function(registration) {
-        console.log('Success!', registration.scope);
-      })
-      .catch( function(error) {
-        console.error('Failure!', error);
-      });
-      console.log('All done.');
-    }
+    const el = document.createElement('pwa-update');
+    document.body.appendChild(el);
   </script>
-*/  
+
+ 
 
 </body>
 </html>
