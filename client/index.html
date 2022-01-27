@@ -64,7 +64,7 @@
       function onLocationError(e) {
         alert(e.message);
     }
-    map.locate({watch: true; enableHighAccuracy: true});
+    map.locate({watch: true, enableHighAccuracy: true});
     map.on('locationfound', onLocationFound);
     map.on('locationerror', onLocationError);
 
