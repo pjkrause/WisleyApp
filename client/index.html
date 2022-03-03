@@ -52,11 +52,11 @@
         poi6  = L.marker([51.3157252, -0.4760261]).bindPopup('Serpents in the wood'),
         poi7  = L.marker([51.3156262, -0.4753292]).bindPopup('Colour, contrasts and reflections'),
         poi8  = L.marker([51.3158642, -0.4745867]).bindPopup('Witch hazels and winter cherries'),
-        poi9  = L.marker([51.3158425, -0.4737306]).bindPopup('A hedge on stilts'),
+        poi9  = L.marker([51.3158425, -0.4737306]).bindPopup('A hedge on stilts');
       var marker;
       // var circle;
     var pointsOfInterest = L.layerGroup([poi1, poi2, poi3, poi4, poi5, poi6, poi7, poi8, poi9]);
-  //  map.addLayer(pointsOfInterest);
+    map.addLayer(pointsOfInterest);
 
     function onLocationFound(e) {
       // var radius = e.accuracy;
