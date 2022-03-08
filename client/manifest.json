@@ -6,6 +6,6 @@
     "theme_color": "#336699",
     "background_color": "#336699",
     "start_url": "/index.html",
-    "display-mode": "standalone"
+    "display": "standalone"
 }
 
