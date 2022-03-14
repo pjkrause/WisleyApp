@@ -109,7 +109,7 @@
     ];
 
     // mark the route on the map
-    var polyline = L.polyline(latlngs, {color: '#23AD23', weight: 4, smoothFactor: 3}).addTo(map);
+    var polyline = L.polyline(latlngs, {color: '#23AD23', weight: 4, smoothFactor: 10}).addTo(map);
     // zoom the map to the polyline
     map.fitBounds(polyline.getBounds());
 
