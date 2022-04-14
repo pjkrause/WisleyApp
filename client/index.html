@@ -134,12 +134,23 @@
       // L.circle(e.latlng, radius).addTo(map);
     }
 
-      function onLocationError(e) {
-        alert(e.message);
+    function onLocationError(e) {
+      alert(e.message);
     }
+
+    function reCentreMap() {
+      if(marker) {
+        var latlng = marker.getLatLng();
+        var zoom = map.getZoom();
+        map.setView(latlng, zoom);
+      }
+    }
+
     map.locate({watch: true, enableHighAccuracy: true});
     map.on('locationfound', onLocationFound);
     map.on('locationerror', onLocationError);
+    // after a popup is closed we need to reposition the map so the marker is central again
+    map.on('popupclose', reCentreMap);
 
   </script>
 
