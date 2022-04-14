@@ -117,16 +117,20 @@
     var marker;
 
     function onLocationFound(e) {
-      // var radius = e.accuracy;
+      // We need to do a check here to see if the user is within the Garden
 
       if(!marker) {
         marker = L.marker(e.latlng).addTo(map);
+        // The first time the user's location is found centre the map on the marker
+        var zoom = map.getZoom();
+        map.setView(e.latlng, zoom);
       } else {
         marker.setLatLng(e.latlng);
       }
       
-      var zoom = map.getZoom();
-      map.setView(e.latlng, zoom);
+      // Don't do this every time as it can annoy the user
+      // var zoom = map.getZoom();
+      // map.setView(e.latlng, zoom);
       // L.circle(e.latlng, radius).addTo(map);
     }
 
