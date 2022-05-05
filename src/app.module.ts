@@ -9,6 +9,7 @@ import { PoisModule } from './pois/pois.module';
   imports: [
     ServeStaticModule.forRoot({
       rootPath: join(__dirname, '..', 'client'),
+      serveRoot: "",
     }),
     PoisModule,],
   controllers: [AppController],
