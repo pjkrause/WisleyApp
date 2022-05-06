@@ -4,6 +4,7 @@ import { AppService } from './app.service';
 import { ServeStaticModule } from '@nestjs/serve-static';
 import { join } from 'path';
 import { PoisModule } from './pois/pois.module';
+import { WalksModule } from './walks/walks.module';
 
 @Module({
   imports: [
@@ -11,7 +12,8 @@ import { PoisModule } from './pois/pois.module';
       rootPath: join(__dirname, '..', 'client'),
       serveRoot: "",
     }),
-    PoisModule,],
+    PoisModule,
+    WalksModule,],
   controllers: [AppController],
   providers: [AppService],
 })
